@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Raihan - Mengenal Framework Web</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ========== BOOTSTRAP CSS ========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- ========== FONT AWESOME ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ========== GOOGLE FONT ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/react.png">
+    <!-- Untuk Apple devices -->
+    <link rel="apple-touch-icon" href="img/react.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80">
+
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <button id="scrollToTop" class="btn" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/react.png" alt="Logo" width="40" height="30" class="d-inline-block align-text-top">
+                <span class="ms-2 fw-bold">React</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mengenal-react">Mengenal React</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why">Mengapa React?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#materials">Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CAROUSEL ========== -->
+    <div class="container my-5">
+        <div class="carousel-container">
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded-4">
+                    <div class="carousel-item active">
+                        <img src="img/3.jpg" class="d-block w-100" alt="React Components">
+                        <div class="carousel-caption">
+                            <h3>React Components</h3>
+                            <p>Bangun UI modular dengan komponen reusable yang mudah dikelola.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/2.jpg" class="d-block w-100" alt="Virtual DOM">
+                        <div class="carousel-caption">
+                            <h3>Virtual DOM</h3>
+                            <p>Performa tinggi dengan sistem rendering yang efisien dan cepat.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/1.jpg" class="d-block w-100" alt="JSX Syntax">
+                        <div class="carousel-caption">
+                            <h3>JSX Syntax</h3>
+                            <p>Tulis markup HTML langsung di dalam JavaScript dengan sintaks yang intuitif.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="card-header">
+                <h2 class="section-title">Tentang React</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="card text-center">
+                            <div class="card-header bg-white border-0">
+                                <h5 class="text-muted mb-0">Dipersembahkan oleh Raihan</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="img/react.png" class="rounded-circle mb-3" width="120" height="120"
+                                    alt="React Logo" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="React JS Library">
+                                <h3 class="card-title fw-bold">React.js</h3>
+                                <p class="card-text text-muted">Library JavaScript untuk membangun antarmuka pengguna
+                                    yang interaktif dan dinamis.</p>
+                                <a href="https://react.dev" target="_blank" class="btn btn-primary">Pelajari Resmi</a>
+                            </div>
+                            <div class="card-footer bg-white border-0 text-muted">
+                                <small>reactkita.vercel.app</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section id="sejarah-react" class="py-5 bg-light">
+        <div class="container">
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body text-center">
+                    <h2 class="section-title mb-4">Apa Itu React? (Penjelasan untuk Pemula 🍎)</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="bg-primary bg-opacity-10 p-4 rounded-circle d-inline-block">
+                                <i class="fab fa-react fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-8 text-start">
+                            <p class="lead mb-3">
+                                <strong>React adalah alat bantu (library) yang dibuat dengan JavaScript</strong> —
+                                fungsinya: membantu kamu membuat tampilan website yang <strong>interaktif dan
+                                    dinamis</strong>.
+                            </p>
+                            <p>
+                                Bayangkan kamu sedang bikin website yang punya tombol “Like”, form komentar, atau daftar
+                                produk yang bisa di-update tanpa reload halaman. Nah, <strong>React membantu kamu
+                                    mengatur semua itu dengan lebih mudah dan rapi</strong>.
+                            </p>
+                            <p>
+                                Tanpa React, kamu harus menulis banyak kode JavaScript manual untuk mengubah tampilan
+                                website saat ada interaksi pengguna — ribet dan rawan error. Dengan React, semuanya jadi
+                                lebih terstruktur dan efisien.
+                            </p>
+                            <div class="d-flex justify-content-start gap-2 mt-3 flex-wrap">
+                                <span class="badge bg-primary">JavaScript Library</span>
+                                <span class="badge bg-success">Mudah Kelola Tampilan Dinamis</span>
+                                <span class="badge bg-info">Bikin Website Cepat & Responsif</span>
+                                <span class="badge bg-warning text-dark">Cocok untuk Pemula & Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body">
+                    <h3><i class="fas fa-history me-2 text-warning"></i>Sejarah Singkat React</h3>
+                    <p class="lead">React bukan sekadar library populer — ia punya sejarah menarik yang membentuk dunia
+                        web modern.</p>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-calendar-alt me-2"></i>Tahun Dibuat</h4>
+                            <ul class="list-unstyled">
+                                <li><strong>2011</strong> — React mulai dikembangkan secara internal di Facebook.</li>
+                                <li><strong>2012</strong> — Pertama kali digunakan di Instagram (setelah diakuisisi
+                                    Facebook).</li>
+                                <li><strong>Mei 2013</strong> — Diresmikan ke publik sebagai open-source di <em>JSConf
+                                        US</em>.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-user-tie me-2"></i>Penciptanya</h4>
+                            <p><strong>Jordan Walke</strong>, insinyur perangkat lunak di Facebook.</p>
+                            <ul class="list-unstyled">
+                                <li>🎓 Lulusan University of Washington.</li>
+                                <li>💡 Terinspirasi oleh XHP (sistem templating Facebook) dan bahasa fungsional seperti
+                                    OCaml.</li>
+                                <li>🔧 Proyek awal bernama “FaxJS”, lalu berubah jadi “React”.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning mt-4">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Fun Fact:</strong> Facebook awalnya ragu merilis React karena takut dianggap “terlalu
+                        aneh” — tapi developer dunia langsung jatuh cinta!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body">
+                    <h3><i class="fas fa-bullseye me-2 text-success"></i>React Itu Untuk Apa?</h3>
+                    <p class="lead">Bayangkan kamu punya <strong>“pabrik LEGO digital”</strong> — React adalah alatnya.
+                        Kamu bisa bikin bagian-bagian UI (tombol, form, card) lalu pasang-pasang seenaknya, dan kalau
+                        ada yang rusak? Cuma ganti satu balok, bukan bongkar seluruh rumah!</p>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-puzzle-piece me-2"></i>1. Membangun UI Berbasis Komponen</h4>
+                            <p>Setiap bagian UI (tombol, card, form) bisa dibuat sebagai komponen terpisah — reusable,
+                                mudah diatur, dan scalable.</p>
+
+                            <h4><i class="fas fa-sync-alt me-2"></i>2. Single Page Application (SPA)</h4>
+                            <p>Navigasi tanpa reload halaman — cepat dan halus seperti aplikasi mobile. Contoh: Gmail,
+                                Facebook, Netflix.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-tachometer-alt me-2"></i>3. Virtual DOM</h4>
+                            <p>React punya “salinan bayangan” DOM yang membuat update UI jadi super cepat dan efisien.
+                            </p>
+
+                            <h4><i class="fas fa-mobile-alt me-2"></i>4. Cross-Platform</h4>
+                            <ul>
+                                <li><strong>React Native</strong> → Aplikasi mobile (iOS & Android)</li>
+                                <li><strong>Next.js</strong> → Server-side rendering & SEO-friendly</li>
+                                <li><strong>React 360</strong> → Pengalaman virtual reality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body">
+                    <h3><i class="fas fa-chart-line me-2 text-info"></i>Kenapa React Populer?</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-white mb-3 text-center">
+                                <i class="fas fa-building fa-2x text-primary mb-3"></i>
+                                <h5>Dibuat oleh Meta</h5>
+                                <p>Didukung Facebook (Meta) — stabil, terus dikembangkan, dan dipakai di produk raksasa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-white mb-3 text-center">
+                                <i class="fas fa-users fa-2x text-success mb-3"></i>
+                                <h5>Komunitas Besar</h5>
+                                <p>StackOverflow, GitHub, forum — solusi untuk hampir semua masalah ada di luar sana.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-white mb-3 text-center">
+                                <i class="fas fa-tools fa-2x text-warning mb-3"></i>
+                                <h5>Ekosistem Luas</h5>
+                                <p>Redux, React Router, Material UI, Next.js — semua siap pakai dan saling terintegrasi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-center mb-4"><i class="fas fa-balance-scale me-2 text-danger"></i>React vs
+                        Bootstrap: Bedanya Apa?</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 feature-card border-primary shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fab fa-react fa-3x text-primary"></i>
+                                    </div>
+                                    <h4>React</h4>
+                                    <p><strong>Bahasa Utama:</strong> JavaScript + JSX</p>
+                                    <p><strong>Tipe:</strong> Library JavaScript untuk UI interaktif</p>
+                                    <p><strong>Fokus:</strong> Manajemen state, komponen dinamis, SPA</p>
+                                    <p><strong>Contoh:</strong> Aplikasi dashboard, media sosial, e-commerce kompleks
+                                    </p>
+                                    <span class="badge bg-primary mt-3">Library UI Dinamis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 feature-card border-purple shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fab fa-bootstrap fa-3x text-purple"></i>
+                                    </div>
+                                    <h4>Bootstrap</h4>
+                                    <p><strong>Bahasa Utama:</strong> HTML, CSS, JavaScript (opsional)</p>
+                                    <p><strong>Tipe:</strong> Framework CSS responsif</p>
+                                    <p><strong>Fokus:</strong> Styling, layout, komponen UI statis</p>
+                                    <p><strong>Contoh:</strong> Landing page, blog, website perusahaan</p>
+                                    <span class="badge bg-purple mt-3">Framework CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-info mt-4">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        <strong>Tip:</strong> Kamu bisa pakai <strong>React + Bootstrap</strong> bersamaan! Bootstrap
+                        buat styling, React buat logika & interaktivitas. Best of both worlds! 🚀
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body bg-info bg-opacity-10">
+                    <h4><i class="fas fa-lightbulb me-2"></i>Perbedaan Utama React vs Bootstrap</h4>
+                    <ul class="mb-0">
+                        <li><strong>React</strong> adalah <em>library JavaScript</em> untuk membuat <strong>UI
+                                dinamis</strong> dengan manajemen state dan data binding.</li>
+                        <li><strong>Bootstrap</strong> adalah <em>framework CSS</em> untuk membuat <strong>UI
+                                statis</strong> yang responsif tanpa perlu coding CSS dari nol.</li>
+                        <li>Keduanya bisa digunakan bersamaan: Bootstrap untuk styling, React untuk logika dan
+                            interaktivitas.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="accordion" id="reactAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseBahasa">
+                            <i class="fas fa-code me-2"></i> Bahasa Pemrograman & Contoh JSX (Penjelasan untuk Pemula
+                            🍎)
+                        </button>
+                    </h2>
+                    <div id="collapseBahasa" class="accordion-collapse collapse show" data-bs-parent="#reactAccordion">
+                        <div class="accordion-body">
+
+                            <!-- Bagian 1: React Pakai JavaScript -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-info-circle me-2 text-primary"></i> React Pakai JavaScript</h5>
+                                <p>
+                                    React bukan bahasa baru — ia adalah <strong>library yang dibuat dengan
+                                        JavaScript</strong>.
+                                    Jadi, kalau kamu sudah belajar dasar JavaScript (seperti variabel, fungsi, if-else),
+                                    kamu sudah siap belajar React!
+                                </p>
+                            </div>
+
+                            <!-- Bagian 2: Apa itu JSX? -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-question-circle me-2 text-warning"></i> Apa itu JSX?</h5>
+                                <p>
+                                    <strong>JSX = JavaScript XML</strong> — ini adalah cara menulis kode di React yang
+                                    <strong>mirip HTML</strong>, tapi sebenarnya tetap JavaScript.
+                                </p>
+                                <p>
+                                    Kenapa disebut “XML”? Karena strukturnya mirip XML/HTML: ada tag pembuka & penutup,
+                                    atribut, dan isinya. Tapi tenang — kamu <strong>nggak perlu belajar XML
+                                        dulu</strong> untuk paham ini. Bayangkan saja JSX = HTML yang bisa dipakai di
+                                    dalam JavaScript.
+                                </p>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Contoh:</strong> Di JavaScript biasa, kamu nggak bisa tulis
+                                    <code><h1>Halo</h1></code> begitu saja. Tapi di React (pakai JSX), kamu bisa!
+                                </div>
+                            </div>
+
+                            <!-- Bagian 3: Apa itu Komponen? -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-puzzle-piece me-2 text-success"></i> Apa itu Komponen?</h5>
+                                <p>
+                                    <strong>Komponen = potongan kode yang bisa dipakai ulang</strong> untuk menampilkan
+                                    bagian tertentu di website.
+                                </p>
+                                <p>
+                                    Contoh: Kamu bikin komponen “Tombol”, lalu bisa dipakai 10x di halaman berbeda —
+                                    tanpa nulis ulang kode. Hemat waktu dan rapi!
+                                </p>
+                                <p>
+                                    Komponen bisa berupa <strong>fungsi</strong> (seperti contoh di bawah) atau
+                                    <strong>class</strong> (nanti kamu pelajari belakangan).
+                                </p>
+                            </div>
+
+                            <!-- Bagian 4: Contoh Kode -->
+                            <div class="card bg-light mt-4">
+                                <div class="card-header bg-dark text-white">
+                                    <strong>Contoh Kode JSX:</strong>
+                                </div>
+                                <div class="card-body">
+                                    <pre class="bg-dark text-white p-3 rounded"><code class="language-jsx">function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+// Pemanggilan komponen:
+<Welcome name="Raihan" /></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Bagian 5: Penjelasan Satu per Satu -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-cogs me-2 text-info"></i> Mari Kita Bongkar Satu per Satu:</h5>
+
+                                <h6>1. <code>function Welcome(props)</code></h6>
+                                <p>
+                                    Ini adalah <strong>deklarasi fungsi komponen</strong> bernama <code>Welcome</code>.
+                                    Kata <code>props</code> adalah singkatan dari “properties” — semacam <strong>kotak
+                                        hadiah</strong> yang berisi data dari luar.
+                                    Bayangkan: kamu kirim “nama” ke dalam komponen → komponen terima lewat
+                                    <code>props</code>.
+                                </p>
+
+                                <h6>2. <code>return <h1>Hello, {props.name}</h1>;</code></h6>
+                                <p>
+                                    Di dalam <code>return</code>, kita tulis JSX.
+                                    <code>{props.name}</code> artinya: “Ambil nilai dari <code>name</code> yang dikirim
+                                    lewat <code>props</code>, lalu tampilkan di sini.”
+                                    Tanda kurung kurawal <code>{ }</code> adalah cara JSX menyisipkan <strong>JavaScript
+                                        di dalam HTML</strong>.
+                                </p>
+
+                                <h6>3. <code><Welcome name="Raihan" /></code></h6>
+                                <p>
+                                    Ini adalah <strong>cara memanggil/menggunakan komponen</strong>
+                                    <code>Welcome</code>.
+                                    Saat kamu tulis <code>name="Raihan"</code>, kamu sedang <strong>mengirim
+                                        data</strong> ke komponen.
+                                    Maka, di dalam komponen, <code>props.name</code> akan berisi nilai
+                                    <strong>"Raihan"</strong>.
+                                </p>
+
+                                <div class="alert alert-success mt-3">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    <strong>Jadi, “Raihan” itu datang dari sini →</strong>
+                                    <code><Welcome name="Raihan" /></code>
+                                    Bukan tiba-tiba muncul — tapi <strong>dikirim sengaja oleh developer</strong> saat
+                                    menggunakan komponen!
+                                </div>
+                            </div>
+
+                            <!-- Bagian 6: Output Akhir -->
+                            <div class="alert alert-light border border-success">
+                                <i class="fas fa-eye me-2"></i>
+                                <strong>Output yang Muncul di Layar:</strong>
+                                <h3>Hello, Raihan</h3>
+                                <small>(Teks ini muncul karena React mengganti <code>{props.name}</code> dengan nilai
+                                    "Raihan")</small>
+                            </div>
+
+                            <!-- Bagian 7: TypeScript (Opsional) -->
+                            <div class="bg-light p-3 rounded mt-4">
+                                <h5><i class="fas fa-shield-alt me-2 text-info"></i> Bonus: TypeScript</h5>
+                                <p>
+                                    Kamu juga bisa pakai <strong>TypeScript</strong> — ini seperti JavaScript tapi
+                                    dengan “helm pengaman”.
+                                    TypeScript membantu kamu mendeteksi error sebelum kode dijalankan — cocok kalau
+                                    proyekmu besar atau timmu banyak.
+                                </p>
+                                <p class="mb-0">
+                                    Tapi untuk belajar dasar React, JavaScript + JSX sudah lebih dari cukup!
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseKomponen">
+                            <i class="fas fa-puzzle-piece me-2"></i> Konsep Komponen dalam React
+                        </button>
+                    </h2>
+                    <div id="collapseKomponen" class="accordion-collapse collapse" data-bs-parent="#reactAccordion">
+                        <div class="accordion-body">
+                            <p>React membangun UI dari <strong>komponen-komponen</strong> kecil yang bisa digunakan
+                                ulang (reusable). Setiap komponen mengelola tampilan dan logikanya sendiri.</p>
+                            <p>Contoh: Header, Sidebar, Card, Button — semuanya bisa jadi komponen terpisah.</p>
+                            <p>Keuntungan:</p>
+                            <ul>
+                                <li>Modularitas tinggi</li>
+                                <li>Mudah di-debug dan diuji</li>
+                                <li>Bisa digunakan di banyak tempat</li>
+                                <li>Tim bisa kerja paralel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseVirtualDOM">
+                            <i class="fas fa-sitemap me-2"></i> Apa itu Virtual DOM?
+                        </button>
+                    </h2>
+                    <div id="collapseVirtualDOM" class="accordion-collapse collapse" data-bs-parent="#reactAccordion">
+                        <div class="accordion-body">
+
+                            <!-- Bagian 1: Apa itu DOM? -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-question-circle me-2 text-primary"></i> Pertama, Apa itu DOM?</h5>
+                                <p>
+                                    <strong>DOM = Document Object Model</strong> — ini adalah cara browser “melihat” dan
+                                    “mengatur” halaman website kamu.
+                                </p>
+                                <p>
+                                    Bayangkan DOM seperti <strong>pohon keluarga</strong> dari semua elemen di
+                                    halamanmu: judul, paragraf, tombol, gambar — semuanya punya “hubungan” dan bisa
+                                    diakses/diubah oleh JavaScript.
+                                </p>
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Contoh sederhana:</strong> Saat kamu klik tombol “Ganti Warna”, JavaScript
+                                    mengubah warna teks di halaman — itu artinya JavaScript sedang <strong>memanipulasi
+                                        DOM</strong>.
+                                </div>
+                            </div>
+
+                            <!-- Bagian 2: Masalah dengan DOM Langsung -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-exclamation-triangle me-2 text-warning"></i> Masalah Kalau Langsung
+                                    Ubah DOM</h5>
+                                <p>
+                                    Mengubah DOM secara langsung itu <strong>lambat dan berat</strong> buat browser —
+                                    apalagi kalau website-mu punya ratusan elemen!
+                                </p>
+                                <p>
+                                    Bayangkan kamu punya daftar belanja 100 item, lalu kamu mau ubah 1 item di tengah.
+                                    Kalau kamu hapus semua, lalu tulis ulang 100 item itu — capek dan boros waktu, kan?
+                                </p>
+                            </div>
+
+                            <!-- Bagian 3: Virtual DOM Solusinya -->
+                            <div class="bg-light p-3 rounded mb-4">
+                                <h5><i class="fas fa-magic me-2 text-success"></i> Nah, Ini Dia: Virtual DOM!</h5>
+                                <p>
+                                    <strong>Virtual DOM adalah “duplikat ringan” dari DOM asli</strong> — disimpan di
+                                    memory, bukan di layar.
+                                </p>
+                                <p>
+                                    Saat ada perubahan (misalnya: data baru masuk), React:
+                                </p>
+                                <ol>
+                                    <li>Buat salinan Virtual DOM yang baru</li>
+                                    <li>Bandingkan dengan Virtual DOM yang lama → cari perbedaannya</li>
+                                    <li>Hanya update bagian yang benar-benar berubah di DOM asli</li>
+                                </ol>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-pizza-slice me-2"></i>
+                                    <strong>Analogi Pizza:</strong> Kamu pesan pizza, tapi topping kejunya kurang.
+                                    Daripada buat ulang seluruh pizza, koki cuma tambahin keju di atasnya → lebih cepat
+                                    dan hemat bahan!
+                                </div>
+                            </div>
+
+                            <!-- Bagian 4: Manfaat Virtual DOM -->
+                            <div>
+                                <h5><i class="fas fa-check-circle me-2 text-success"></i> Kenapa Virtual DOM Keren?</h5>
+                                <ul>
+                                    <li><strong>Lebih cepat</strong> — karena nggak render ulang seluruh halaman</li>
+                                    <li><strong>Lebih ringan</strong> — browser nggak kelelahan</li>
+                                    <li><strong>Lebih halus</strong> — pengguna nggak lihat “kedip-kedip” saat halaman
+                                        berubah</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="alert alert-success text-center mt-5">
+                    <i class="fas fa-star me-2"></i>
+                    <strong>React = Standar Industri Front-End Modern</strong> — fleksibel, powerful, dan akan tetap
+                    relevan
+                    bertahun-tahun ke depan.
+                </div>
+
+            </div>
+    </section>
+
+    <style>
+        .badge-purple {
+            background-color: #7b4dff;
+        }
+
+        .text-purple {
+            color: #7b4dff;
+        }
+
+        .border-purple {
+            border-color: #7b4dff !important;
+        }
+
+        .feature-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        pre {
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+    </style>
+
+
+    <!-- Section dengan layout teks + ikon animasi -->
+    <section id="why" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Mengapa Harus React?</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="placeholder-text mb-3">React memungkinkan Anda membangun antarmuka pengguna yang cepat,
+                        scalable, dan mudah dikelola.</div>
+                    <div class="placeholder-text mb-3">Komponen reusable membuat pengembangan lebih efisien dan
+                        konsisten.</div>
+                    <div class="placeholder-text">Komunitas besar dan ekosistem yang kaya memudahkan Anda menemukan
+                        solusi.</div>
+                    <!-- accordion untuk konten tambahan -->
+                    <div class="accordion mt-4" id="whyAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    Bagaimana cara belajar React?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#whyAccordion">
+                                <div class="accordion-body">
+                                    Mulai dari dokumentasi resmi, lalu coba project kecil seperti Todo List, lalu
+                                    tingkatkan ke project kompleks seperti e-commerce atau dashboard.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    Apakah React sulit dipelajari?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#whyAccordion">
+                                <div class="accordion-body">
+                                    Tidak, jika Anda sudah paham dasar JavaScript. React justru menyederhanakan
+                                    pengembangan UI modern dengan konsep komponen yang intuitif.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <div class="circle-icon mx-auto" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="React JS Icon">
+                        <img src="img/react.png" width="60" height="60" alt="React">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MATERIALS ========== -->
+    <!-- Grid card materials dengan collapse horizontal dan animasi -->
+    <section id="materials" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Materials</h2>
+            <div class="row g-4">
+                <!-- CARD 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Apa+itu+React" class="card-img-top"
+                            alt="Apa itu React">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dasar React</h5>
+                            <p class="card-text flex-grow-1">Pemahaman dasar tentang JSX, komponen, dan props dalam
+                                React.</p>
+                            <button class="btn btn-outline-primary mt-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseReactDasar" aria-expanded="false">
+                                Detail Materi
+                            </button>
+                            <div class="collapse mt-3" id="collapseReactDasar">
+                                <div class="card card-body">
+                                    <ul class="list-unstyled small">
+                                        <li><i class="fas fa-check text-success me-2"></i>Pengenalan JSX</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Fungsi Komponen</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Props dan State</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Event Handling</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Hooks+React" class="card-img-top"
+                            alt="Hooks React">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">React Hooks</h5>
+                            <p class="card-text flex-grow-1">Mengelola state dan lifecycle dengan Hooks: useState,
+                                useEffect, dll.</p>
+                            <button class="btn btn-outline-primary mt-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseHooks" aria-expanded="false">
+                                Detail Materi
+                            </button>
+                            <div class="collapse mt-3" id="collapseHooks">
+                                <div class="card card-body">
+                                    <ul class="list-unstyled small">
+                                        <li><i class="fas fa-check text-success me-2"></i>useState()</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>useEffect()</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>useContext()</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Custom Hooks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD  -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Project+React" class="card-img-top"
+                            alt="Project React">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Project React</h5>
+                            <p class="card-text flex-grow-1">Proyek nyata untuk portofolio: Todo App, Weather App, dll.
+                            </p>
+                            <button class="btn btn-outline-primary mt-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseProject" aria-expanded="false">
+                                Detail Materi
+                            </button>
+                            <div class="collapse mt-3" id="collapseProject">
+                                <div class="card card-body">
+                                    <ul class="list-unstyled small">
+                                        <li><i class="fas fa-check text-success me-2"></i>Todo List App</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Weather App (API)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>E-commerce Frontend</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Dashboard Admin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section untuk materi tambahan -->
+            <div class="mt-5 p-4 bg-white rounded-3 shadow-sm">
+                <h3 class="mb-4 text-center">Materi Lanjutan React</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-book text-primary"></i>
+                            </div>
+                            <div>
+                                <h5>React Router</h5>
+                                <p class="text-muted small mb-0">Navigasi antar halaman tanpa reload menggunakan React
+                                    Router v6.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="bg-success bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-code text-success"></i>
+                            </div>
+                            <div>
+                                <h5>State Management</h5>
+                                <p class="text-muted small mb-0">Kelola state global dengan Context API atau Redux
+                                    Toolkit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="bg-info bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-server text-info"></i>
+                            </div>
+                            <div>
+                                <h5>API Integration</h5>
+                                <p class="text-muted small mb-0">Fetch data dari REST API menggunakan Axios atau Fetch
+                                    API.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="bg-warning bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-paint-brush text-warning"></i>
+                            </div>
+                            <div>
+                                <h5>Styling in React</h5>
+                                <p class="text-muted small mb-0">CSS Modules, Styled Components, atau Tailwind CSS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="placeholder-text mb-3">Hubungi kami untuk informasi lebih lanjut tentang pembelajaran
+                        React.</div>
+                    <div class="placeholder-text mb-3">Tim kami siap membantu Anda belajar React dari dasar hingga
+                        mahir.</div>
+                    <div class="placeholder-text">Silakan isi formulir di sebelah kanan, kami akan segera merespon.
+                    </div>
+
+                    <!-- toast notifikasi -->
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-outline-success" id="liveToastBtn">
+                            <i class="fas fa-bell me-2"></i>Subscribe Updates
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer dengan link dan copyright -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>React</h5>
+                    <p class="text-muted small">Platform belajar React JS terlengkap untuk pemula hingga mahir — tugas
+                        mata kuliah Web Design.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#mengenal-react">Mengenal React</a></li>
+                        <li><a href="#materials">Materials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="mb-0 text-center text-muted">&copy; 2025 Portofolio — Tugas Web Design Raihan. All rights
+                reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast notifikasi muncul saat tombol ditekan -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <i class="fas fa-bell me-2"></i>
+                <strong class="me-auto">Berlangganan Berhasil</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Terima kasih! Anda akan menerima update materi terbaru tentang React.
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+
+        const scrollToTopButton = document.getElementById("scrollToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add("show");
+            } else {
+                scrollToTopButton.classList.remove("show");
+            }
+        });
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+
+        const toastTrigger = document.getElementById('liveToastBtn');
+        const toastLive = document.getElementById('liveToast');
+        if (toastTrigger && toastLive) {
+            const toast = new bootstrap.Toast(toastLive);
+            toastTrigger.addEventListener('click', () => {
+                toast.show();
+            });
+        }
+
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Terima kasih! Pesan Anda telah terkirim.');
+                this.reset();
+            });
+        }
+
+        // Tooltip initialization
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+
+</html>
