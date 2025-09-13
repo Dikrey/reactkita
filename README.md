@@ -108,10 +108,10 @@ Website ini bukan sekadar tampilan cantik — ia adalah **pembelajaran visual**.
 ## 📸 Preview (Screenshot)
 
 > ![Preview Website](preview/main.png)
+> ![Preview Website](preview/tentang.png)
 > ![Preview Website](preview/apaitu.png)
 > ![Preview Website](preview/mengapa.png)
-> ![Preview Website](preview/main.png)
-> ![Preview Website](preview/tentang.png)
+
 ---
 
 ## 🙌 Kontribusi
