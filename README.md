@@ -1,4 +1,4 @@
-# 🚀 Portofolio: Mengenal Framework Web Modern
+# 🚀 Portofolio: Mengenal Library Web Modern
 
 > **"Bangun UI Dinamis dengan React — Dari Pemula Hingga Mahir"**  
 > *Tugas Mata Pelajaran Front-End | Oleh Raihan X Visualcodepo*
@@ -123,15 +123,53 @@ Anda bisa membantu meningkatkan proyek ini dengan:
 - Menambahkan bahasa alternatif (Bahasa Indonesia)
 - Memberikan masukan desain
 
-Pull Request sangat dihargai! 🙏
-
 ---
+
 
 ## 📜 Lisensi
 
 Proyek ini dilisensikan di bawah lisensi **MIT** — silakan gunakan, modifikasi, dan sebarkan secara bebas untuk tujuan edukasi.
 
+Proyek ini **bebas digunakan dan tetap mencantumkan nama pembuat** untuk:
+- Tugas sekolah 🏫  
+- Modifikasi belajar 🔧  
+- Portofolio pribadi 📂  
+
+❌ **Tidak untuk diperjualbelikan.**  
+Dibuat dengan 💖 oleh Dikrey, untuk siswa/i.
+
+
+
+## 🛑 Peringatan Penting: Hargai Pembuat Asli
+
+> ⚠️ **Jangan hapus atau ganti nama pembuat asli.**
+
+Website ini dibuat dengan **waktu, usaha, dan hati** oleh:
+> 💙 **@raihan_official0307**
+
+Jika kamu:
+- 🔁 Re-upload
+- 🔄 Re-Post
+- 📦 Re-Compile
+- ☁️ Re-Host
+
+👉 **Tetap cantumkan kredit asli.**
+
+### ❌ DILARANG:
+- Mengaku sebagai pembuat asli
+- Menghapus/mengganti nama `@raihan_official0307`
+- Menjual seolah ini karya sendiri
+
+### ✅ DIIZINKAN:
+- Belajar
+- Bagikan — **dengan kredit**
+
 ---
+
+
+✅**Tetap mencantumkan nama pembuat**
+---
+
 
 ## 👨‍💻 Dibuat oleh
 
