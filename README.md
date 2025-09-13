@@ -145,7 +145,7 @@ Proyek ini dilisensikan di bawah lisensi **MIT** — silakan gunakan, modifikasi
 
 ---
 
-### ✅ Siap untuk dipresentasikan di kelas, dikirim ke dosen, atau ditampilkan di portofolio pribadi Anda!
+### ✅ Siap untuk dipresentasikan di kelas
 
 ---
 
