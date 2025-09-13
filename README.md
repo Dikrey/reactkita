@@ -107,9 +107,11 @@ Website ini bukan sekadar tampilan cantik — ia adalah **pembelajaran visual**.
 
 ## 📸 Preview (Screenshot)
 
-*(Tambahkan screenshot di sini nanti saat upload ke GitHub)*  
-> ![Preview Website](https://via.placeholder.com/800x450?text=Preview+Portofolio+React+by+Raihan)
-
+> ![Preview Website](preview/main.png)
+> ![Preview Website](preview/apaitu.png)
+> ![Preview Website](preview/mengapa.png)
+> ![Preview Website](preview/main.png)
+> ![Preview Website](preview/tentang.png)
 ---
 
 ## 🙌 Kontribusi
